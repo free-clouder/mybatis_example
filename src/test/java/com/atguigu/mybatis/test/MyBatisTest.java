@@ -39,8 +39,8 @@ public class MyBatisTest {
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is);
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        User user = userMapper.getUserById();
-        System.out.println(user);
+        userMapper.deleteUser();
+
     }
 
     @Test
@@ -50,5 +50,7 @@ public class MyBatisTest {
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is);
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        User user = userMapper.getUserById();
+        System.out.println(user);
     }
 }

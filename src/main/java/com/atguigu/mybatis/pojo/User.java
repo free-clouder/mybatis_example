@@ -1,82 +1,54 @@
 package com.atguigu.mybatis.pojo;
 
-public class User {
-    private Integer id;
-    private String username;
-    private String password;
-    private Integer age;
-    private String sex;
-    private String email;
+import org.apache.ibatis.type.SqlxmlTypeHandler;
 
-    public User(Integer id, String username, String password, Integer age, String sex, String email) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.age = age;
-        this.sex = sex;
-        this.email = email;
+public class User {
+    private String academy;
+    private String major;
+    private String subject;
+    private Integer qyt;
+
+    public User(String academy, String major, String subject,Integer qyt){
+        this.academy = academy;
+        this.major = major;
+        this.subject = subject;
+        this.qyt = qyt;
     }
 
     public User() {
     }
 
-    public Integer getId() {
-        return id;
+    public String getAcademy() {
+        return academy;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setMajor(String major) {
+        this.major = major;
     }
 
-    public String getUsername() {
-        return username;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
-    public String getPassword() {
-        return password;
+    public Integer getQyt() {
+        return qyt;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setQyt(Integer qyt) {
+        this.qyt = qyt;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", age=" + age +
-                ", sex='" + sex + '\'' +
-                ", email='" + email + '\'' +
+                "academy=" + academy + '\'' +
+                ", major='" + major + '\'' +
+                ", subject='" + subject + '\'' +
+                ", qyt=" + qyt + '\'' +
                 '}';
     }
 }
